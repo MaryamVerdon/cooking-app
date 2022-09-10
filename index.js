@@ -1,9 +1,10 @@
 const result = document.getElementById("result");
 const form = document.querySelector("form");
+const input = document.querySelector("input");
 let meals = [];
 
-const fetchMeals = async () => {
-  await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
+const fetchMeals = async (search) => {
+  await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + search)
     .then((res) => res.json())
     .then((data) => (meals = data.meals));
 
@@ -27,7 +28,11 @@ const mealsDisplay = () => {
     .join("");
 };
 
+input.addEventListener("input", (e) => {
+  fetchMeals(e.target.value);
+});
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  fetchMeals().then(() => mealsDisplay());
+  mealsDisplay();
 });
