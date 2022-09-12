@@ -2,7 +2,7 @@
 
 Ce projet à pour objectif de manipuler une API en JavaScript. L'application permet d'afficher des recettes de cuisines en fonction de ce que l'utilisateur tape dans la barre de recheche.
 
-`API` https://www.themealdb.com/api/json/v1/1/search.php?s=
+API : [API Meals](https://www.themealdb.com/api/json/v1/1/search.php?s=)
 
 Technologies : `HTML5`, `CSS3`, `JavaScript`
 
